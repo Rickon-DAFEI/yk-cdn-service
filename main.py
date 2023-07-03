@@ -1,6 +1,6 @@
-from flask import Flask, request, jsonify, send_file, cross_origin
+from flask import Flask, request, jsonify, send_file
 import os
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 CORS(app)
