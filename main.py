@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, cross_origin
 import os
 from flask_cors import CORS
 
@@ -6,7 +6,8 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route("/uploads", methods=["POST"])
+@app.route("/upload", methods=["POST"])
+@cross_origin()
 def upload_file():
     if "file" not in request.files:
         return jsonify({"error": "No file uploaded"})
@@ -21,7 +22,8 @@ def upload_file():
     return jsonify({"message": "File uploaded successfully"})
 
 
-@app.route("/uploads/<path:filename>")
+@app.route("/upload/<path:filename>")
+@cross_origin()
 def serve_file(filename):
     # 拼接文件路径，可以根据需要修改文件存储位置
     file_path = "uploads/" + filename
