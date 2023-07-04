@@ -12,7 +12,7 @@ docker build -t file-service .
 ### 运行Docker容器:
 
 ``` plaintext
-docker run -d --name cdn-service -p 3976:3000 -v /uploads:/docker/cdn/uploads --restart=always 67371c375779e27e3f31cd95356f1f24cd0ee0ea79e93
+docker run -d --name cdn-service -p 3976:3000 -v /docker/cdn/uploads:/uploads --restart=always 67371c375779e27e3f31cd95356f1f24cd0ee0ea79e93
 ```
 请注意，上述命令中的67371c375779e27e3f31cd95356f1f24cd0ee0ea79e93是替代为你自己的镜像ID。
 
