@@ -1,13 +1,13 @@
-# yk-cnd-service
-yk-cnd-service是一个文件上传服务端，基于Python Flask框架。它提供了文件上传和文件下载功能，并支持自动构建Docker镜像。
+# yk-file-service
+yk-file-service是一个文件上传服务端，基于Python Flask框架。它提供了文件上传和文件下载功能，并支持自动构建Docker镜像。
 
 ### Docker镜像创建命令
-要使用Docker部署和运行yk-cnd-service，你可以按照以下步骤执行Docker镜像创建命令：
+要使用Docker部署和运行yk-file-service，你可以按照以下步骤执行Docker镜像创建命令：
 
 ### 构建Docker镜像:
 
 ``` plaintext
-docker build -t cnd-service .
+docker build -t file-service .
 ```
 ### 运行Docker容器:
 
